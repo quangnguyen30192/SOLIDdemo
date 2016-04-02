@@ -1,0 +1,194 @@
+<html>
+<head>
+	<title>Search Actor</title>
+    <link rel="icon" href="../static/css/img/assignment3.jpg" />
+	<script type="text/javascript" src="../static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../static/js/search.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/assignment3.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/images.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/checkbox.css" />
+</head>
+<body>
+	<div id="menu">
+        <h2><a href="../index.html">Assignment 3</a></h2>
+        <span class="menuImg"></span>		
+        <ul>
+			<li>
+				<div class="title"><span class="countryImg"></span>Country</div>	
+				<ul class="country">
+					<li><a href="../country/create.html">Create New Country</a></li>
+					<li><a href="../country/search.html">Search</a></li>
+					<li><a href="../country/countries.html">List Of Countries</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="staffImg"></span>Staff</div>	
+				<ul>
+					<li><a href="../staff/create.html">Create New Staff</a></li>
+					<li><a href="../staff/search.html">Search</a></li>
+					<li><a href="../staff/staffs.html">List Of Staffs</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="customerImg"></span>Customer</div>	
+				<ul>
+					<li><a href="../customer/create.html">Create New Customer</a></li>
+					<li><a href="../customer/search.html">Search</a></li>
+					<li><a href="../customer/customers.html">List Of Customers</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="categoryImg"></span>Category</div>	
+				<ul>
+					<li><a href="../category/create.html">Create New Category</a></li>
+					<li><a href="../category/search.html">Search</a></li>
+					<li><a href="../category/categories.html">List Of Categories</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="actorImg"></span>Actor</div>	
+				<ul id="opening">
+					<li><a href="create.html">Create New Actor</a></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="actors.html">List Of Actor</a></li>				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="firmImg"></span>Firm</div>	
+				<ul>
+					<li><a href="../firm/create.html">Create New Firm</a></li>
+					<li><a href="../firm/search.html">Search</a></li>
+					<li><a href="../firm/firms.html">List Of Firms</a></li>
+				</ul>
+			</li>		
+		</ul>
+        <div id="aboutus">
+            <h2>Nguyễn Bá Nhật Quang</h2>
+            <h2>SE90114</h2>
+        </div>
+	</div>
+    <div id="content">
+        <h1>Search A Actor</h1>
+        <form action="searchSuccess.html" method="POST" id="form">
+    		<fieldset>
+                <div id="searchInContainer">
+                    <input id="demo_box_1" class="css-checkbox" type="checkbox" />
+                    <label for="demo_box_1" name="demo_lbl_1" class="css-label">Search By ID</label>
+                    
+                    <input id="demo_box_2" class="css-checkbox" type="checkbox" />
+                    <label for="demo_box_2" name="demo_lbl_2" class="css-label">Search By Name</label>
+                    
+                    <input id="demo_box_3" class="css-checkbox" type="checkbox" />
+                    <label for="demo_box_3" name="demo_lbl_3" class="css-label">Search By Date</label><br/>
+    			</div>
+               	<input id="s" type="text" />
+                <input type="submit" value="Search" id="submitButton" />                    
+            </fieldset>
+            <br />
+            <br />
+            <h2>Result :</h2>
+                <table class="tableResult">
+            	<thead>
+            		<tr>
+            			<th>ActorID</th>
+            			<th>Name</th>
+            			<th>Last Update</th>
+            		</tr>
+            	</thead>
+            	<tbody>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c01">C01</a></td>
+            			<td>Laos</td>
+            			<td>01/01/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c02">C02</a></td>
+            			<td>Viet Nam</td>
+            			<td>01/02/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c03">C03</a></td>
+            			<td>Korea</td>
+            			<td>03/02/2014</td>
+            		</tr>  
+            		<tr>
+            			<td><a href="actorDetail.html?id=c04">C04</a></td>
+            			<td>Myanma</td>
+            			<td>01/01/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c05">C05</a></td>
+            			<td>Canada</td>
+            			<td>01/02/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c06">C06</a></td>
+            			<td>Japanese</td>
+            			<td>03/02/2014</td>
+            		</tr>  
+            		<tr>
+            			<td><a href="actorDetail.html?id=c07">C07</a></td>
+            			<td>France</td>
+            			<td>01/01/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c08">C08</a></td>
+            			<td>Russia</td>
+            			<td>01/02/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c09">C09</a></td>
+            			<td>Russia</td>
+            			<td>03/02/2014</td>
+            		</tr>  
+            		<tr>
+            			<td><a href="actorDetail.html?id=c10">C10</a></td>
+            			<td>France</td>
+            			<td>01/01/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c11">C11</a></td>
+            			<td>Viet Nam</td>
+            			<td>01/02/2014</td>
+            		</tr>
+            		<tr>
+            			<td><a href="actorDetail.html?id=c12">C12</a></td>
+            			<td>Chinese</td>
+            			<td>03/02/2014</td>
+            		</tr>  
+              </tbody>              
+            </table>
+        </form>           
+    </div>
+    
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+	   
+        $('.tableResult').dataTable({
+                "bPaginate": true,
+                "bLengthChange": false,
+                "bFilter": true,
+                "bSort": true,
+                "bInfo": true,
+                "bAutoWidth": true,
+                "iDisplayLength": 5
+                     
+              
+        });
+		$('.title').click(function() {
+			$('#menu ul ul').slideUp();
+			if (!$(this).next().is(':visible')) {
+				$(this).next().slideDown();	
+			}
+		});
+        
+        
+        $('#menu ul #opening').show();
+        
+	})
+</script>
+</html>

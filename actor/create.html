@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>Create Actor</title>
+    <link rel="icon" href="../static/css/img/assignment3.jpg" />
+	<script type="text/javascript" src="../static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.validate.min.js"></script>
+   	<script type="text/javascript" src="../static/js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/assignment3.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/images.css" />
+    <link rel="stylesheet" href="../static/css/jquery.ui.all.css" />
+</head>
+<body>
+	<div id="menu">
+        <h2><a href="../index.html">Assignment 3</a></h2>
+        <span class="menuImg"></span>		
+        <ul>
+			<li>
+				<div class="title"><span class="countryImg"></span>Country</div>	
+				<ul class="country">
+					<li><a href="../country/create.html">Create New Country</a></li>
+					<li><a href="../country/search.html">Search</a></li>
+					<li><a href="../country/countries.html">List Of Countries</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="staffImg"></span>Staff</div>	
+				<ul>
+					<li><a href="../staff/create.html">Create New Staff</a></li>
+					<li><a href="../staff/search.html">Search</a></li>
+					<li><a href="../staff/staffs.html">List Of Staffs</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="customerImg"></span>Customer</div>	
+				<ul>
+					<li><a href="../customer/create.html">Create New Customer</a></li>
+					<li><a href="../customer/search.html">Search</a></li>
+					<li><a href="../customer/customers.html">List Of Customers</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="categoryImg"></span>Category</div>	
+				<ul>
+					<li><a href="../category/create.html">Create New Category</a></li>
+					<li><a href="../category/search.html">Search</a></li>
+					<li><a href="../category/categories.html">List Of Categories</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="actorImg"></span>Actor</div>	
+				<ul id="opening">
+					<li><a href="create.html">Create New Actor</a></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="actors.html">List Of Actor</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="firmImg"></span>Firm</div>	
+				<ul>
+					<li><a href="../firm/create.html">Create New Firm</a></li>
+					<li><a href="../firm/search.html">Search</a></li>
+					<li><a href="../firm/firms.html">List Of Firms</a></li>
+				</ul>
+			</li>		
+		</ul>
+        <div id="aboutus">
+            <h2>Nguyễn Bá Nhật Quang</h2>
+            <h2>SE90114</h2>
+        </div>
+	</div>
+    <div id="content">
+        <h1>Create New Actor</h1>
+        <form action="createSuccess.html" method="POST" id="form">
+            <table>
+                <tr>
+                    <td><h2>ActorID: </h2></td>
+                    <td><input type="text" name="actorID" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>Name: </h2></td>
+                    <td><input type="text" name="name" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>Last Update: </h2></td>
+                    <td><input type="text" name="date" id="date"/></td>
+                </tr>
+
+            </table>
+            <div class="btns">
+                <input type="reset" value="Clear"/>
+                <input type="submit" value="Create" class="btsubmit" />
+            </div>
+        </form>           
+    </div>
+    
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('#date').datepicker();
+       
+		$('.title').click(function() {
+			$('#menu ul ul').slideUp();
+			if (!$(this).next().is(':visible')) {
+				$(this).next().slideDown();	
+			}
+		});
+        
+        
+        $('#menu ul #opening').show();
+        
+        $('#form').validate({
+            rules: {
+                actorID: {
+                    minlength : 3
+                },
+                
+                name: {
+                    minlength : 5
+                },
+                
+                date: {
+                    minlength : 7,
+                    required: true,
+                    date: true
+                }
+            },
+            submitHandler: function(form){
+                form.submit();
+            }
+        });
+        
+	})
+</script>
+</html>
